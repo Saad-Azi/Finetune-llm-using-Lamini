@@ -3,13 +3,14 @@ import lamini
 
 
 try:
-    lamini.api_key=""
+    lamini.api_key="add your key here (get it from lamini's official site)"
 except Exception as e:
     print("api error ::")
     raise e
 
 def get_data():
     data=[
+        # add your data here
         {"input":"question","output":"response"},
     ]
     return data
@@ -21,5 +22,5 @@ def get_data():
 
 
 # For testing
-llm=Lamini(model_name="model_id")
+llm=Lamini(model_name="trained_model_id (get it form your lamini's account once the model is trained)")
 print(llm.generate("""<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n Your input here <|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"""))
